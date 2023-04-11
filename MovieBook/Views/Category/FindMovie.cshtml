@@ -1,0 +1,27 @@
+﻿@model List<MovieCategoryListDto>
+
+<div class="yuzdeyuzlukalan tamsayfapaddingalani">
+    @foreach (var item in Model)
+    {
+        <div class="div6bolum tablo">
+
+            <div class="yuzdeyuzlukalan  heytbe">
+                <img src="https://localhost:7233/@item.Movie.Poster_Path" alt="">
+                <div class="namediv">
+                    <p>@item.Movie.MovieName</p>
+                    <p>@item.Movie.ReleaseDate / @item.Movie.RunTime</p>
+                </div>
+                <div class="divsetting">
+                    <div class="dotsetting">
+                        <a asp-controller="Movie" asp-action="Delete" asp-route-id="@item.MovieId"><span class="deletebtn">Sil</span></a>
+                    </div>
+                    <div class="playbtn">
+                        <a asp-controller="Movie" asp-action="MovieDetail" asp-route-id="@item.MovieId">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

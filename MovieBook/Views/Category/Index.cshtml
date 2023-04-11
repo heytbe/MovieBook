@@ -1,0 +1,16 @@
+﻿@using Entity.API.Dto.Category;
+@model List<CategoryContentLİstDto>
+<div class="yuzdeyuzlukalan">
+@foreach (var item in Model)
+ {
+       <a asp-controller="Category" asp-action="FindMovie" asp-route-id="@item.Id">
+            <div class="yuzdeyirmialan left bordermargin">
+            <div class="content">
+                <img src="https://localhost:7233/@item.Categoryimage" alt="">
+                <div class="textcategory"><span>@item.CategoryName</span></div>
+            </div>
+           </div>
+        </a>
+ }
+
+</div>

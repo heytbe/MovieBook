@@ -1,0 +1,1593 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    }
+    
+    body{
+    
+        width:100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none; /* borderdan ustunun alanı */
+        line-height: 1.5; /* satır yüksekliği */
+        font-style: normal;
+        font-variant: normal; /* yazıyı büyük yapıyor */
+        font-weight: normal;/* yazı kalınlığı*/
+        text-align: center; /* yazıyının hangi tarafa doğru olacağini belirliyor */
+        text-decoration: none; /* alt cizgi */
+        background: rgba(128, 128, 128, 0.1)
+    
+        /* burda fonta boyut vermedi çünkü font boyutları responsive olarak verilir */
+    }
+    
+    @media only screen and (min-width:1200px){ /* xl */
+        body{
+    
+            font-size: 15px;
+        }
+    }
+    @media only screen and (min-width:992px) and (max-width:1199px){ /* L */
+        body{
+    
+            font-size: 13px;
+        }
+    }
+    
+    @media only screen and (min-width:768px) and (max-width:991px){ /* M */
+        body{
+    
+            font-size: 12px;
+        }
+    }
+    @media only screen and (min-width:575px) and (max-width:767px){ /* S */
+        body{
+    
+            font-size: 12px;
+        }
+    }
+    @media only screen and (max-width:574px){ /* XS */
+        body{
+    
+            font-size: 12px;
+        }
+    }
+    
+    #tumsayfaalani{
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none;
+      outline: none;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    header{
+        position: relative;
+        display: block;
+        float: left;
+        width: 250px;
+        height: 100%;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+
+    .menu{
+        position: fixed;
+        display: block;
+        width: 250px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #2a2e3f;
+        text-align: left;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        box-shadow: 0 16px 18px rgb(5 5 7 / 50%);
+        z-index: 999;
+    }
+
+    .menu .logoalania{
+        width: 100%;
+    }
+
+    .logoalani{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-bottom: thin solid rgba(209, 202, 202, 0.2);
+        outline: none;
+        overflow: hidden;
+        text-align: left;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .logoalani .logo{
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .logoalani .logo i{
+        border: none;
+        outline: none;
+        font-size: 35px;
+        color: darkmagenta;
+    }
+
+    .logoalani p{
+        font-size: 35px;
+        color: darkslateblue;
+        margin-left: 10px;
+        font-weight: 600;
+    }
+
+    .navmenu{
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    .navmenu li{
+        padding: 0 10px 0 10px;
+        user-select: none;
+    }
+
+    .navmenu li:first-child{
+        margin-top: 10px;
+    }
+
+    .navmenu .listebaslikli{
+        margin: 10px 0 10px 0;
+    }
+
+    .navmenu li .listebaslik{
+        color: #ccc;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .5px;
+        padding: 0 10px 0 10px;
+    }
+
+    .navmenu li a{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        border: none;
+        outline: none;
+        text-align: left;
+        padding: 10px 0 10px 0;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        transition: all 0.3ms ease-in-out;
+        -webkit-transition: all 0.3ms ease-in-out;
+        -moz-transition: all 0.3ms ease-in-out;
+        -ms-transition: all 0.3ms ease-in-out;
+        -o-transition: all 0.3ms ease-in-out;
+        user-select: none;
+    }
+
+    .navmenu li a:hover{
+        background-color: #000;
+    }
+
+    .navmenu li a i{
+        display: block;
+        float: left;
+        font-size: 100%;
+        color: rgba(255,255,255,0.6);
+        margin-left: 10px;
+    }
+
+    .navmenu li a p{
+        font-size: 100%;
+        color: #fff;
+        margin-left: 35px;
+        margin-top: -2px;
+        font-weight: 600;
+    }
+
+    .navmenu .exitbtn{
+        position: fixed;
+        bottom: 15px;
+        z-index: 999;
+        width: 250px;
+    }
+    
+    main{
+        position: relative;
+        display: block;
+        float: right;
+        width: calc(100% - 250px);
+        height: 100%;
+        border: none;
+        outline: none;
+    }
+
+    .menuheightellibespx{
+        height: 55px;
+        overflow: hidden;
+    }
+
+    .menubutonu{
+        position: relative;
+        display: inline-block;
+        height: auto;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        padding: 5px 12px 5px 12px;
+        cursor: pointer;
+    }
+
+    .menubutonu:hover{
+        background-color: rgba(128, 128, 128, 0.1);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .search{
+        position: relative;
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        border: none;
+        outline: none;
+        overflow: hidden;
+    }
+
+    .search form,.search form .aramaalani{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        border: none;
+        outline: none;
+        overflow: hidden;
+    }
+
+    .search form input{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 35px;
+        border: thin solid #2a2e3f;
+        outline: none;
+        overflow: hidden;
+        padding: 0 30px 0 20px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+
+    .search form .aramaalani label{
+        position: absolute;
+        display: inline-block;
+        height: auto;
+        z-index: 999;
+        top: 50%;
+        transform: translate(0,-50%);
+        right: 0;
+        bottom: 0;
+        -webkit-transform: translate(0,-50%);
+        -moz-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        -o-transform: translate(0,-50%);
+        padding: 0 10px 0 0;
+        font-size: 18px;
+        margin-bottom: -8px;
+}
+
+   .menuler .headermenu{
+    position: relative;
+    display: inline-block;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+   }
+
+   .menuler .headermenu:first-child{
+    padding-left: 5px;
+   }
+
+   .menuler .headermenu:last-child{
+    margin-right: 0;
+   }
+
+   .menuler .headermenu img{
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    outline: thin solid rgba(209, 202, 202, 0.2);
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.menualtmenu{
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    border: none;
+    outline: none;
+    background-color: rgba(209, 202, 202, 0.7);
+    top: 60px;
+    right: 0;
+    z-index: 999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    list-style: none;
+    text-align: left;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.menualtmenu li{
+    display: block;
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 15px;
+    color: #000;
+    transition: all 0.3ms ease-in-out;
+    -webkit-transition: all 0.3ms ease-in-out;
+    -moz-transition: all 0.3ms ease-in-out;
+    -ms-transition: all 0.3ms ease-in-out;
+    -o-transition: all 0.3ms ease-in-out;
+}
+
+.menualtmenu li:hover,.menualtmenu li a:hover{
+    background-color: #2a2e3f;
+    color: #fff;
+}
+
+.menualtmenu li:last-child{
+    margin-bottom: 10px;
+}
+
+.menualtmenu li i{
+    margin-right: 10px;
+}
+
+@media only screen and (min-width:1200px){ /* xl */
+   .headersearch{
+        display: none !important;
+   }
+
+   .menualtmenu{
+        display: none !important;
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1199px){ /* L */
+    .headersearch{
+        display: none !important;
+    }
+
+    header .menu{
+        width: 80px;
+    }
+
+    main{
+        width: calc(100% - 80px);
+    }
+
+    .menualtmenu{
+        display: none !important;
+    }
+
+    .menu .logoalania .logoalani .logo{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .menu .logoalania .logoalani .logo i{
+        margin-left: 10px;
+    }
+
+    .menu .logoalania .logoalani p{
+        display: none;
+    }
+
+    .navmenu li a{
+        text-align: center;
+    }
+
+    .navmenu li a i{
+       float: none;
+    }
+
+    .navmenu li a i{
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu li a p{
+        display: none;
+    }
+
+    .navmenu li .listebaslik{
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu .exitbtn{
+        width: 80px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){ /* M */
+    .headersearch{
+        display: none !important;
+    }
+
+    header .menu{
+        width: 80px;
+    }
+
+    main{
+        width: calc(100% - 80px);
+    }
+
+    .menualtmenu{
+        display: none !important;
+    }
+
+    .menu .logoalania .logoalani .logo{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .menu .logoalania .logoalani .logo i{
+        margin-left: 10px;
+    }
+
+    .menu .logoalania .logoalani p{
+        display: none;
+    }
+
+    .navmenu li a{
+        text-align: center;
+    }
+
+    .navmenu li a i{
+       float: none;
+    }
+
+    .navmenu li a i{
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu li a p{
+        display: none;
+    }
+
+    .navmenu li .listebaslik{
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu .exitbtn{
+        width: 80px;
+    }
+}
+@media only screen and (min-width:575px) and (max-width:767px){ /* S */
+    .search{
+        display: none !important;
+    }
+
+    header .menu{
+        width: 80px;
+    }
+
+    main{
+        width: calc(100% - 80px);
+    }
+
+    .menu .logoalania .logoalani .logo{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .menu .logoalania .logoalani .logo i{
+        margin-left: 10px;
+    }
+
+    .menu .logoalania .logoalani p{
+        display: none;
+    }
+
+    .headercompress,.headermoon,.menualtmenu{
+        display: none !important;
+    }
+
+    .menu .logoalania .logoalani p{
+        display: none;
+    }
+
+    .navmenu li a{
+        text-align: center;
+    }
+
+    .navmenu li a i{
+       float: none;
+    }
+
+    .navmenu li a i{
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu li a p{
+        display: none;
+    }
+
+    .navmenu li .listebaslik{
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu .exitbtn{
+        width: 80px;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:574px){ /* XS */
+    .search{
+        display: none !important;
+    }
+
+    header .menu{
+        width: 80px;
+    }
+
+    main{
+        width: calc(100% - 80px);
+    }
+
+    .headercompress,.headermoon,.menualtmenu{
+        display: none !important;
+    }
+
+    .menu .logoalania .logoalani .logo{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .menu .logoalania .logoalani .logo i{
+        margin-left: 10px;
+    }
+
+    .menu .logoalania .logoalani p{
+        display: none;
+    }
+
+    .navmenu li a{
+        text-align: center;
+    }
+
+    .navmenu li a i{
+       float: none;
+    }
+
+    .navmenu li a i{
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu li a p{
+        display: none;
+    }
+
+    .navmenu li .listebaslik{
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navmenu .exitbtn{
+        width: 80px;
+    }
+}
+@media only screen and (max-width:500px){ /* XS */
+    .search{
+        display: none !important;
+    }
+
+    header .menu{
+        display: none !important;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .headercompress,.headermoon,.menualtmenu{
+        display: none !important;
+    }
+}
+
+.tablo{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 0 15px 0 15px;
+    margin-top: 20px;
+}
+
+img{
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.namediv{
+    position: absolute;
+    display: inline;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 30%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    background-color: rgba(128, 128, 128, 0.6);
+    text-align: center;
+}
+
+.namediv p{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+}
+
+.namediv p:first-child{
+    font-size: 18px;
+    color: #fff;
+}
+
+.namediv p:last-child{
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+}
+
+.deneme{
+    position: relative;
+    display: block;
+}
+
+.divsetting{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 0, 0,0.7);
+}
+
+.playbtn{
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: thin solid rgba(255,255,255,0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    margin: 0 auto;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.playbtn:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+
+.playbtn i{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: darkred;
+    text-align: center;
+    top: 3px;
+    left: 2px;
+    cursor: pointer;
+}
+
+.playbtn i:hover{
+    color: blue;
+}
+
+.dotsetting {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 10px;
+    height: auto;
+    border: none;
+    outline: none;
+    padding: 5px 10px 0 0;
+    cursor: pointer;
+}
+
+.dotsetting .deletebtn {
+    color: #fff;
+    font-size: 16px;
+    background-color: rgba(56, 67, 170, 0.6);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px 10px 5px 10px;
+}
+
+/*------------------------------------------*/
+.tamekran {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-align: left;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+    a:hover {
+        color: #fff;
+    }
+
+
+.resimustuimdb {
+    position: absolute !important;
+    display: block;
+    top: 5px;
+    right: 5px;
+    border: none;
+    outline: none;
+}
+
+.filimafisyazilar {
+    position: relative;
+    display: block;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+.filimafisalani .filimarkaplan {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0,0.3);
+}
+
+.filimicon i {
+    margin-top: 4px; 
+    margin-left: 6px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-right: 6px;
+}
+
+.divkucukitempostalaniyazilar {
+    position: relative;
+    display: block;
+    float: left;
+    width: 66%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+.filimafisyazilar .divkucukitempostalaniyazilar {
+    width: 70% !important;
+}
+
+.divsolalan {
+    position: relative;
+    display: block;
+    float: left;
+    height: auto;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+    .divsolalan.filimafis {
+        width: 20.8%;
+    }
+
+.imdb {
+    position: relative;
+    display: inline-block !important;
+    width: auto !important;
+    background: #f5c518;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    font-size: 10px !important;
+}
+
+.icerikaltbaslik {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.filimafisyazilar .divkucukitempostalaniyazilar {
+    width: 70% !important;
+}
+
+.sitefilimbilgiler span {
+    color: #fff;
+}
+
+.filimisimspan {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+.filimbilgilersite {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.icerikaltbaslik {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.altbaslikyanyanaduzen {
+    float: left;
+    width: auto;
+    border: thin solid cadetblue;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.filimicon {
+    position: relative;
+    display: block;
+    float: left;
+    height: auto;
+    border: 1px solid #0586a7;
+    outline: none;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 10px;
+    padding: 7px 6px 7px 6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 17px;
+}
+
+    .filimicon:hover {
+        border: 1px solid #fff;
+        color: #0586a7;
+    }
+
+.filimoneriaciklama {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-align: left;
+    color: rgba(255, 255, 255,0.8);
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    user-select: none;
+}
+
+
+@media only screen and (min-width:1200px) { /* XL */
+    .filimafisyazilar {
+        width: 1200px;
+        min-width: 1200px;
+        max-width: 1200px;
+        margin-top: -80px;
+        margin-bottom: 80px;
+    }
+
+    .filimisimspan {
+        font-size: 50px;
+    }
+
+    .filimafisalani {
+        background-position: center -70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 150px !important;
+        background-attachment: fixed;
+    }
+
+    .divitemalticalc {
+        width: calc(16.66% - 15px) !important;
+        margin-right: 15px;
+    }
+
+    .divkucukekranfilimbilgileri {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .filimafisyazilar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px 0 15px;
+    }
+
+    .filimisimspan {
+        font-size: 25px;
+    }
+
+    .divsolalan.filimafis {
+        width: 25%;
+        max-height: 380px;
+    }
+
+    .filimafisyazilar .divkucukitempostalaniyazilar {
+        width: 70% !important;
+    }
+
+    .filimafisalani {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px !important;
+    }
+
+    .divitemalticalc {
+        width: calc(33.33% - 15px) !important;
+        margin-right: 15px;
+    }
+
+    .filimbilgilersite span,
+    .filimbilgilersite a {
+        font-size: 15px !important;
+    }
+
+    .divkucukekranfilimbilgileri {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .filimafisyazilar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px 0 15px;
+    }
+
+    .filimisimspan {
+        font-size: 25px;
+    }
+
+    .divsolalan.filimafis {
+        width: 25%;
+        max-height: 380px;
+    }
+
+    .filimafisyazilar .divkucukitempostalaniyazilar {
+        width: 60% !important;
+    }
+
+    .filimafisalani {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px !important;
+    }
+
+    .divitemalticalc {
+        width: calc(33.33% - 15px) !important;
+        margin-right: 15px;
+    }
+
+    .filimbilgilersite span,
+    .filimbilgilersite a {
+        font-size: 15px !important;
+    }
+
+    .divkucukekranfilimbilgileri {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .filimafisyazilar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px 0 15px;
+    }
+
+    .filimisimspan {
+        font-size: 30px;
+    }
+
+    .divsolalan.filimafis {
+        width: 25%;
+        max-height: 380px;
+    }
+
+    .filimafisyazilar .divkucukitempostalaniyazilar {
+        width: 70% !important;
+    }
+
+    .filimafisalani {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px !important;
+    }
+
+    .divitemalticalc {
+        width: calc(33.33% - 15px) !important;
+        margin-right: 15px;
+    }
+
+    .filimbilgilersite span,
+    .filimbilgilersite a {
+        font-size: 15px !important;
+    }
+
+    .divkucukekranfilimbilgileri {
+        background: rgb(34,34,34);
+        background: -moz-linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        background: -webkit-linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        background: linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#ffffff",GradientType=1);
+        padding: 15px !important;
+        color: #fff;
+    }
+
+    .sitefilimbilgiler .filimbilgilersite {
+        display: none;
+    }
+
+    .sitefilimbilgiler {
+        margin-left: 5px;
+    }
+
+    .divyuzdeon {
+        width: 100% !important;
+    }
+
+        .divyuzdeon img {
+            margin: 0;
+        }
+
+    .divyuzdedoksan {
+        width: 100% !important;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .yorum {
+        width: 95%;
+    }
+
+    .yorumcevap {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .filimafisyazilar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+        padding: 0 15px 0 15px;
+    }
+
+    .filimisimspan {
+        font-size: 25px;
+    }
+
+    .divsolalan.filimafis {
+        width: 25%;
+        max-height: 380px;
+    }
+
+    .filimafisyazilar .divkucukitempostalaniyazilar {
+        width: 70% !important;
+    }
+
+    .filimafisalani {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px !important;
+    }
+
+    .divitemalticalc {
+        width: calc(33.33% - 15px) !important;
+        margin-right: 15px;
+    }
+
+    .filimbilgilersite span,
+    .filimbilgilersite a {
+        font-size: 13px !important;
+    }
+
+    .divkucukekranfilimbilgileri {
+        background: rgb(34,34,34);
+        background: -moz-linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        background: -webkit-linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        background: linear-gradient(0deg, rgba(34,34,34,1) 57%, rgba(255,255,255,0) 360%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#ffffff",GradientType=1);
+        padding: 15px !important;
+        color: #fff;
+    }
+
+    .sitefilimbilgiler .filimbilgilersite {
+        display: none;
+    }
+
+    .sitefilimbilgiler {
+        margin-left: 5px;
+    }
+
+    .divyuzdeon {
+        width: 100% !important;
+    }
+
+        .divyuzdeon img {
+            margin: 0;
+        }
+
+    .divyuzdedoksan {
+        width: 100% !important;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .yorum {
+        width: 95%;
+    }
+
+    .yorumcevap {
+        width: 90%;
+    }
+}
+
+/*slider*/
+
+.slidercontent {
+    position : relative;
+    display : block;
+    width: 100%;
+    height : auto;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.imgbody img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.img {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/*Slider Bitiş*/
+
+/*Movie Create*/
+
+#moviecreate {
+    position: relative;
+    display: block;
+    width: 60%;
+    height: auto;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    margin-top : 20px;
+    left : 50%;
+    transform : translate(-50%);
+}
+
+.input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+    .input label {
+        position: relative;
+        display: block;
+        float: left;
+        width: 30%;
+        height: auto;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        text-align : left;
+    }
+
+    .input input,
+    .input select,
+    .input textarea {
+        position: relative;
+        display: block;
+        width: 50%;
+        height: 35px;
+        overflow: hidden;
+        padding: 5px;
+        border-radius: 5px;
+        border: thin solid gainsboro;
+        outline: none;
+    }
+
+    .input textarea {
+        height: 100px;
+    }
+
+.frombtn {
+    position: relative;
+    display:  block;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(92, 92, 143);
+    color: #fff;
+    margin-top : 20px;
+    float:left;
+}
+
+    .frombtn:hover {
+        background-color: rgb(65, 65, 138);
+    }
+
+.inputcheckbox{
+    position : relative;
+    display : inline-block;
+    float :left;
+    border:none;
+    outline : none;
+    overflow : hidden;
+    margin-right : 10px;
+    margin-top : 20px;
+}
+
+.inputcheckbox:last-child{
+    margin-right : 0;
+}
+
+.form-check {
+    position: relative;
+    float: left;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right:5px;
+}
+
+.clear{
+    clear : both;
+}
+/*Movie Create Bitiş*/
+/*Category*/
+.content {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 193px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.textcategory {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+    .textcategory span {
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .yuzdeyirmialan{
+        width: calc(33.3% - 20px);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .yuzdeyirmialan {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (min-width:575px) and (max-width:767px) { /* S */
+    .yuzdeyirmialan {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .yuzdeyirmialan {
+        width: calc(50% - 20px);
+    }
+}
+/*Category Bitiş*/
+
+/*Movie Fragman*/
+
+.fragmanbtn {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: #133057;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+}
+
+    .fragmanbtn span {
+        position: absolute;
+        display: block;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: none;
+        outline: none;
+        color: gray;
+    }
+
+.popupfragman {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 70%;
+    z-index: 9999;
+}
+
+.fragmanyoutube {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.popupfragman span {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 5px;
+    color: gray;
+    cursor: pointer;
+}
+
+/*Movie Fragman Bitiş*/

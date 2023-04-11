@@ -1,0 +1,11 @@
+﻿<form asp-controller="Category" asp-action="CreateCategory" method="post" id="moviecreate" enctype="multipart/form-data">
+    <div class="input">
+        <label for="">Category Adı :</label>
+        <input type="text" name="categoryname" placeholder="Category Adı">
+    </div>
+    <div class="input">
+        <label for="categoryimages">Kategori Resim :</label>
+        <input type="file" name="Categoryimage" id="categoryimages" multiple>
+    </div>
+    <input type="submit" value="Category Create" class="frombtn"/>
+</form>

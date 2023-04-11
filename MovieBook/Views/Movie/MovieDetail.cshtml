@@ -1,0 +1,81 @@
+﻿@model MovieListDto
+
+@if (Model.MovieFragman.Contains("youtube"))
+{
+    <div class="popupfragman">
+        <span>Kapat</span>
+        <iframe width="560" height="315" class="fragmanyoutube" src="@Model.MovieFragman" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+}
+<div class="tamekran filimafisalani" style="background-image: url(https://localhost:7233/@Model.BackdropPath);">
+    <div class="filimafisyazilar">
+        <div class="tamekran">
+            <div class="divsolalan filimafis">
+                <img src="https://localhost:7233/@Model.Poster_Path" alt="">
+                <span class="resimustuimdb icerikaltbaslik imdb"><i class="fa-brands fa-imdb"></i>İmdb 8</span>
+                <div class="fragmanbtn"><span>Fragman</span></div>
+            </div>
+            <div class="divkucukitempostalaniyazilar sitefilimbilgiler">
+                <span class="filimisimspan">@Model.MovieName</span>
+                <div class="filimbilgilersite">
+                    <a href=""><span class="icerikaltbaslik altbaslikyanyanaduzen">Admin heytbe</span></a>
+                    <span class="icerikaltbaslik altbaslikyanyanaduzen">@Model.ReleaseDate</span>
+                    <span class="icerikaltbaslik altbaslikyanyanaduzen"><i class="fa-solid fa-eye"></i>1000</span>
+                    @foreach (var item in Model.Categories)
+                    {
+                        <a asp-controller="Category" asp-action="GetAll" asp-route-id="@item.Category.Id"><span class="icerikaltbaslik altbaslikyanyanaduzen">@item.Category.CategoryName</span></a>
+                    }
+                </div>
+                <div class="filimbilgilersite">
+                    <a href=""><span class="filimicon"><i class="fa-solid fa-heart"></i></span></a>
+                    <a href=""><span class="filimicon"><i class="fa-solid fa-list"></i></span></a>
+                    <a href=""><span class="filimicon"><i class="fa-solid fa-check"></i></span></a>
+                </div>
+                <div class="filimbilgilersite">
+                    <span class="icerikaltbaslik altbaslikyanyanaduzen bordernone">Amerika</span>
+                    <span class="icerikaltbaslik altbaslikyanyanaduzen bordernone">1s 30dk</span>
+                </div>
+                <div class="filimbilgilersite">
+                    <span class="filimoneriaciklama none">@Model.Overview</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filimarkaplan"></div>
+</div>
+<div class="tamekran divkucukekranfilimbilgileri">
+    <div class="filimbilgilersite">
+        <a href=""><span class="icerikaltbaslik altbaslikyanyanaduzen">Admin heytbe</span></a>
+        <span class="icerikaltbaslik altbaslikyanyanaduzen">21.03.2022</span>
+        <span class="icerikaltbaslik altbaslikyanyanaduzen"><i class="fa-solid fa-eye"></i>1000</span>
+    </div>
+    <div class="filimbilgilersite">
+        <a href=""><span class="filimicon"><i class="fa-solid fa-heart"></i></span></a>
+        <a href=""><span class="filimicon"><i class="fa-solid fa-list"></i></span></a>
+        <a href=""><span class="filimicon"><i class="fa-solid fa-check"></i></span></a>
+    </div>
+    <div class="filimbilgilersite">
+        <span class="icerikaltbaslik altbaslikyanyanaduzen bordernone">Amerika</span>
+        <span class="icerikaltbaslik altbaslikyanyanaduzen bordernone">1s 30dk</span>
+    </div>
+    <div class="filimbilgilersite">
+        @foreach (var item in Model.Categories)
+        {
+            <a asp-controller="Category" asp-action="GetAll" asp-route-id="@item.Category.Id"><span class="icerikaltbaslik altbaslikyanyanaduzen">@item.Category.CategoryName</span></a>
+        }
+    </div>
+    <div class="filimbilgilersite">
+        <span class="filimoneriaciklama">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae laboriosam voluptatibus quisquam eum amet maxime libero saepe iusto ratione necessitatibus!</span>
+    </div>
+</div>
+<div class="slidercontent">
+    <div class="imgbody">
+        @foreach (var item in Model.MovieImages)
+        {
+            <div class="img">
+                <img src="https://localhost:7233/@item.ImageName" alt="">
+            </div>
+        }
+    </div>
+</div>
+          

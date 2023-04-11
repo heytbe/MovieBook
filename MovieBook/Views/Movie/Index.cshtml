@@ -1,0 +1,27 @@
+﻿@model List<MovieIndex>
+
+<div class="yuzdeyuzlukalan tamsayfapaddingalani">
+    @foreach (var item in Model)
+    {
+             <div class="div6bolum tablo">
+              
+                <div class="yuzdeyuzlukalan  heytbe">
+                        <img src="https://localhost:7233/@item.Poster_Path" alt="">
+                    <div class="namediv">
+                        <p>@item.MovieName</p>
+                        <p>@item.ReleaseDate / @item.RunTime</p>
+                    </div>
+                    <div class="divsetting">
+                        <div class="dotsetting">
+                            <a asp-controller="Movie" asp-action="Delete" asp-route-id="@item.Id"><span class="deletebtn">Sil</span></a>
+                        </div>
+                            <div class="playbtn">
+                                <a asp-controller="Movie" asp-action="MovieDetail" asp-route-id="@item.Id">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+     }
+</div>

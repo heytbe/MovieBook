@@ -1,0 +1,64 @@
+﻿@using Entity.API.Dto.Category;
+@model List<CategoryListDto>
+
+<form asp-controller="Movie" asp-action="MovieCreate" method="post" enctype="multipart/form-data" id="moviecreate">
+    <div class="input">
+        <label for="moviename">Filim Adı :</label>
+        <input type="text" name="movieName" placeholder="Filim Adı">
+    </div>
+    <div class="input">
+        <label for="movieorginal">Orjinal Filim Adı Nedir :</label>
+        <input type="text" name="orjinalName" placeholder="Filim Adı">
+    </div>
+    <div class="input">
+        <label for="movieposter">Filim Poster :</label>
+        <input type="file" name="poster_Path">
+    </div>
+    <div class="input">
+        <label for="movieback">Filim Arka Plan Resim :</label>
+        <input type="file" name="backdropPath">
+    </div>
+    <div class="input">
+        <label for="adult">Adult :</label>
+        <select name="adult">
+            <option value="0">Yok</option>
+            <option value="1">Evet</option>
+        </select>
+    </div>
+    <div class="input">
+        <label for="moviefragman">Filim Fragman :</label>
+        <input type="text" name="movieFragman" placeholder="Filim Fragman">
+    </div>
+    <div class="input">
+        <label for="movieimdb">Filim Imdb :</label>
+        <input type="text" name="imdb" placeholder="Filim Imdb">
+    </div>
+    <div class="input">
+        <label for="movieoverview">Filim Açıklama :</label>
+        <textarea name="overview" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="input">
+        <label for="moviedate">Filim Tarih :</label>
+        <input type="text" name="releaseDate" placeholder="Filim Tarih">
+    </div>
+    <div class="input">
+        <label for="movietime">Filim Süre :</label>
+        <input type="text" name="runTime" placeholder="Filim Süre">
+    </div>
+    <div class="input">
+        <label for="movietag">Filim Etiket :</label>
+        <input type="text" name="tagLine" placeholder="Filim Etiket">
+    </div>
+    <div class="input">
+        <label for="movieimages">Filim Resimleri :</label>
+        <input type="file" name="movieImages" id="movieimages" multiple>
+    </div>
+        @foreach (var item in Model)
+        {
+            <div class="inputcheckbox">
+                <input type="checkbox" name="categories[]" value="@item.Id" class="form-check">@item.CategoryName
+            </div>
+        }
+    <div class="clear"></div>
+    <input type="submit" value="Movie Create" class="frombtn" />
+</form>
